@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css//style.css">
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>IT Seminar Student Registration</h1>
+
+        <p class="description">
+            Please complete the form below to register for the upcoming IT seminar.
+        </p>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                    aria-describedby="fullNameError"
+                    aria-invalid="false"
+                >
+
+                <p id="fullNameError" class="error"></p>
+            </div>
+
+
+            <div class="form-group">
+                <label for="studentNumber">Student Number</label>
+
+                <input
+                    type="text"
+                    id="studentNumber"
+                    name="studentNumber"
+                    placeholder="24-1234-123"
+                    required
+                    aria-describedby="studentNumberError"
+                    aria-invalid="false"
+                >
+
+                <p id="studentNumberError" class="error"></p>
+            </div>
+
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-describedby="emailError"
+                    aria-invalid="false"
+                >
+
+                <p id="emailError" class="error"></p>
+            </div>
+
+
+        
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="mobileNumber"
+                    name="mobileNumber"
+                    placeholder="09171234567"
+                    required
+                    aria-describedby="mobileError"
+                    aria-invalid="false"
+                >
+
+                <p id="mobileError" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    aria-describedby="passwordError passwordFeedback"
+                    aria-invalid="false"
+                >
+
+                <p id="passwordFeedback" class="feedback"></p>
+                <p id="passwordError" class="error"></p>
+            </div>
+
+
+        
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    aria-describedby="confirmPasswordError"
+                    aria-invalid="false"
+                >
+
+                <p id="confirmPasswordError" class="error"></p>
+            </div>
+
+
+            
+            <div class="form-group">
+                <label for="course">Course</label>
+
+                <select
+                    id="course"
+                    name="course"
+                    required
+                    aria-describedby="courseError"
+                    aria-invalid="false"
+                >
+                    <option value="">Select your course</option>
+                    <option value="BSIT">BSIT</option>
+                    <option value="BSCS">BSCS</option>
+                </select>
+
+                <p id="courseError" class="error"></p>
+            </div>
+
+
+          
+            <div class="checkbox-group">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required
+                    aria-describedby="termsError"
+                    aria-invalid="false"
+                >
+
+                <label for="terms">
+                    I agree to the terms and conditions.
+                </label>
+
+            </div>
+
+            <p id="termsError" class="error"></p>
+
+            
+            <div class="button-group">
+
+                <button type="submit" id="registerBtn">
+                    Register
+                </button>
+
+                <button type="reset" id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+
+        
+        <div
+            id="successMessage"
+            class="success-message"
+            role="status"
+            aria-live="polite"
+            hidden
+        ></div>
+
+
+     
+        <section
+            id="registrationSummary"
+            class="registration-summary"
+            aria-labelledby="summaryTitle"
+            hidden
+        >
+
+            <h2 id="summaryTitle">Registration Summary</h2>
+
+            <p>
+                <strong>Full Name:</strong>
+                <span id="summaryName"></span>
+            </p>
+
+            <p>
+                <strong>Student Number:</strong>
+                <span id="summaryStudentNumber"></span>
+            </p>
+
+            <p>
+                <strong>Email Address:</strong>
+                <span id="summaryEmail"></span>
+            </p>
+
+            <p>
+                <strong>Mobile Number:</strong>
+                <span id="summaryMobileNumber"></span>
+            </p>
+
+            <p>
+                <strong>Course:</strong>
+                <span id="summaryCourse"></span>
+            </p>
+
+        </section>
+
+    </main>
+
+    
+</body>
+</html>
